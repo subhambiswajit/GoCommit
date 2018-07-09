@@ -16,10 +16,12 @@ buildscript {
 }
 
 allprojects {
-    repositories {
+
+    def var = repositories {
         google()
         jcenter()
     }
+    var
 }
 
 task clean(type: Delete) {
