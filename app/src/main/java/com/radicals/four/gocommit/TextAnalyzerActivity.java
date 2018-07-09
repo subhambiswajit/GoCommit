@@ -25,7 +25,7 @@ public class TextAnalyzerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText analyzing_string = findViewById(R.id.analyzing_edit_text);
-                Intent analyze_to_scheduler_intent = new Intent(TextAnalyzerActivity.this, Scheduler.class);
+                Intent analyze_to_scheduler_intent = new Intent(TextAnalyzerActivity.this, Reminders.class);
                 analyze_to_scheduler_intent.putExtra(sms_inbox_key,grabInboxMessage(sms_type.INBOX));
                 analyze_to_scheduler_intent.putExtra(sms_sent_key,grabInboxMessage(sms_type.SENT));
                 startActivity(analyze_to_scheduler_intent);
