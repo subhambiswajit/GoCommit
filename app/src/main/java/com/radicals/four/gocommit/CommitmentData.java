@@ -6,6 +6,7 @@ import java.util.List;
 public class CommitmentData {
     public String TaskName;
     public String Time;
+    public Commitments.TimeInfo TimeInfo;
     public CommitmentData(String taskname, String time) {
         this.TaskName = taskname;
         this.Time = time;
