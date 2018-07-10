@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import java.util.ArrayList;
+
 public class TextAnalyzerActivity extends AppCompatActivity {
     public final static String sms_inbox_key = "INBOX_KEY";
     public final static String sms_sent_key = "SENT_KEY";
@@ -34,6 +36,7 @@ public class TextAnalyzerActivity extends AppCompatActivity {
     }
 
     public String grabInboxMessage(sms_type type) {
+
         String sms_path = "content://sms/inbox";
         if (type == sms_type.SENT)
             sms_path = "content://sms/sent";
