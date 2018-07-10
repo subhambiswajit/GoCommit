@@ -96,5 +96,6 @@
     </string>
     <string name="reminder_when">When</string>
     <string name="reminder_task">Task</string>
-    <string name="reminder_set_remider">Set remider</string>
+    <string name="reminder_set_remider">Set reminder</string>
+    <string name="Reminders_heading">Save Your Schedules</string>
 </resources>

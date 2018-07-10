@@ -9,6 +9,7 @@
     tools:showIn="@layout/activity_reminders">
 
     <TextView
+        android:id="@+id/custom_listView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_margin"
