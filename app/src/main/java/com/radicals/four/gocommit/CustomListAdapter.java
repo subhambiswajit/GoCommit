@@ -77,26 +77,21 @@ public class CustomListAdapter extends BaseAdapter {
     public void createEvent (CommitmentData reminder) {
         final ContentValues event = new ContentValues();
         event.put(Events.CALENDAR_ID, 1);
-
         event.put(Events.TITLE, reminder.TaskName);
         event.put(Events.DESCRIPTION, reminder.TaskName);
         event.put(Events.EVENT_LOCATION, "This event is auto created by goCommit");
-
         event.put(Events.DTSTART, System.currentTimeMillis());
         event.put(Events.DTEND, System.currentTimeMillis() + 1800*1000);
         event.put(Events.ALL_DAY, 0);   // 0 for false, 1 for true
         event.put(Events.HAS_ALARM, 1); // 0 for false, 1 for true
-
         String timeZone = TimeZone.getDefault().getID();
         event.put(Events.EVENT_TIMEZONE, timeZone);
-
         Uri baseUri;
         if (Build.VERSION.SDK_INT >= 8) {
             baseUri = Uri.parse("content://com.android.calendar/events");
         } else {
             baseUri = Uri.parse("content://calendar/events");
         }
-
         context.getContentResolver().insert(baseUri, event);
         Toast.makeText(context,"The Reminder for event"+ reminder.TaskName + "is created", Toast.LENGTH_LONG ).show();
     }

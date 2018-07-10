@@ -35,9 +35,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:text="@string/text_analyze_button"
         app:layout_constraintEnd_toEndOf="@+id/analyzing_edit_text"
         app:layout_constraintStart_toStartOf="@+id/analyzing_edit_text"
         app:layout_constraintTop_toBottomOf="@+id/analyzing_edit_text" />
+
 </android.support.constraint.ConstraintLayout>
